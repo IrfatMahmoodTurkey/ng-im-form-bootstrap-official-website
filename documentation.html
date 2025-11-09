@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | NG IM FORM</title>
+    <!-- Load Tailwind CSS for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles to mimic Bootstrap's clean, structured look */
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f4f6f8;
+            /* Light gray background for documentation feel */
+        }
+
+        .text-primary-600 {
+            color: #0d6efd;
+            /* Official Bootstrap Blue */
+        }
+
+        .bg-primary-600 {
+            background-color: #0d6efd;
+        }
+
+        .sidebar {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                transform: translateX(0);
+            }
+        }
+
+        /* Style for code blocks */
+        pre {
+            background-color: #212529;
+            /* Dark background */
+            color: #f8f9fa;
+            /* Light text */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+        }
+    </style>
+    <script>
+        // Toggle sidebar visibility on mobile
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+            sidebar.classList.toggle('hidden');
+        }
+
+        // Close sidebar when an anchor link is clicked (mobile only)
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('#sidebar a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 768) {
+                        toggleSidebar();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="md:grid md:grid-cols-[280px_1fr] min-h-screen">
+
+    <!-- Mobile Header and Toggle Button -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center md:hidden sticky top-0 z-20">
+        <h1 class="text-xl font-bold text-gray-900">
+            NG <span class="text-primary-600">IM FORM</span> Docs
+        </h1>
+        <button onclick="toggleSidebar()" class="text-gray-600 hover:text-primary-600 focus:outline-none">
+            <!-- Hamburger Icon (Menu) -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar"
+        class="sidebar hidden fixed top-0 left-0 w-64 md:w-full md:block h-full bg-gray-900 text-white z-20 p-6 md:sticky md:top-0 md:h-screen overflow-y-auto">
+        <div class="mb-8 hidden md:block">
+            <h1 class="text-3xl font-extrabold mb-1">NG IM FORM</h1>
+            <p class="text-gray-400 text-sm">Dynamic Form Builder</p>
+        </div>
+
+        <ul class="space-y-2 text-sm">
+            <li><a href="#introduction" class="block py-2 px-3 rounded-lg font-bold bg-primary-600/20 text-white">1.
+                    Introduction</a></li>
+            <li><a href="#installation" class="block py-2 px-3 rounded-lg hover:bg-gray-700 transition duration-150">2.
+                    Installation & Setup</a></li>
+            <li><a href="#concepts" class="block py-2 px-3 rounded-lg hover:bg-gray-700 transition duration-150">3. Key
+                    Concepts</a></li>
+            <li>
+                <span
+                    class="block py-2 px-3 text-gray-400 uppercase tracking-widest text-xs font-semibold mt-4 mb-2">Form
+                    Structure</span>
+                <ul class="pl-4 space-y-1">
+                    <li><a href="#sections"
+                            class="block py-1 px-3 rounded-lg hover:bg-gray-700 transition duration-150">3.1 Multiple
+                            Sections</a></li>
+                    <li><a href="#fields"
+                            class="block py-1 px-3 rounded-lg hover:bg-gray-700 transition duration-150">3.2 Form
+                            Fields</a></li>
+                </ul>
+            </li>
+            <li>
+                <span
+                    class="block py-2 px-3 text-gray-400 uppercase tracking-widest text-xs font-semibold mt-4 mb-2">Usage</span>
+                <ul class="pl-4 space-y-1">
+                    <li><a href="#drag-drop"
+                            class="block py-1 px-3 rounded-lg hover:bg-gray-700 transition duration-150">4.1 Drag &
+                            Drop</a></li>
+                    <li><a href="#json-output"
+                            class="block py-1 px-3 rounded-lg hover:bg-gray-700 transition duration-150">4.2 JSON
+                            Submission</a></li>
+                </ul>
+            </li>
+            <li><a href="#use-cases" class="block py-2 px-3 rounded-lg hover:bg-gray-700 transition duration-150">5. Use
+                    Cases</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="md:col-span-1 p-6 sm:p-10 lg:p-16">
+
+        <!-- Introduction -->
+        <section id="introduction" class="mb-12 pt-4">
+            <h2 class="text-4xl font-extrabold text-gray-900 mb-4 border-b pb-2">1. Introduction</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                <strong class="font-semibold">NG IM FORM</strong> is a powerful, front-end library designed for
+                developers who need to implement dynamic form creation capabilities within their applications. It
+                provides a visual interface that allows non-technical users to build complex forms at runtime, fully
+                powered by the responsive design of **Bootstrap 5**.
+            </p>
+            <div class="p-4 bg-blue-50 border-l-4 border-primary-600 rounded-lg">
+                <p class="font-medium text-gray-800">
+                    <span class="font-bold text-primary-600">Key Benefit:</span> Total control over form structure and
+                    immediate access to clean, structured JSON data upon submission, streamlining integration with any
+                    backend system.
+                </p>
+            </div>
+        </section>
+
+        <!-- Installation & Setup -->
+        <section id="installation" class="mb-12 pt-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4 border-b pb-2">2. Installation & Setup</h2>
+            <p class="text-gray-700 mb-4">
+                Getting started with NG IM FORM involves installing the package and setting up the basic prerequisites.
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3">2.1 Installation via npm or yarn</h3>
+            <p class="text-gray-700 mb-2">
+                Use your preferred package manager to add the library to your project dependencies:
+            </p>
+            <pre><code>
+# Using npm
+npm install ng-im-form-bootstrap
+
+# Using yarn
+yarn add ng-im-form-bootstrap
+            </code></pre>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3 mt-6">2.2 Prerequisites</h3>
+            <p class="text-gray-700 mb-2">
+                Ensure you have the following in your project setup, as the component relies on the Bootstrap framework
+                for its styling and core functionality:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4 mb-6">
+                <li><strong class="font-semibold">Bootstrap 5:</strong> CSS and JavaScript bundles must be included.
+                </li>
+                <li><strong class="font-semibold">Angular/React/Vue:</strong> The component is framework-agnostic but is
+                    typically integrated into a modern JavaScript application.</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3 mt-6">2.3 Initialization Example (Conceptual)</h3>
+            <p class="text-gray-700 mb-2">
+                After installation, import the module and initialize the form builder on your target element (e.g.,
+                within an Angular component or React hook):
+            </p>
+            <pre><code>
+// TypeScript/JavaScript module import
+import { FormBuilder } from 'ng-im-form-bootstrap';
+
+// Assume 'containerElement' is the DOM element where the builder will live
+const containerElement = document.getElementById('form-builder-root');
+
+if (containerElement) {
+    const builder = new FormBuilder({
+        target: containerElement,
+        initialConfig: { sections: [], fields: [] }
+    });
+
+    // Render the visual interface
+    builder.render();
+}
+            </code></pre>
+
+            <h3 class="text-xl font-bold text-gray-900 mb-3 mt-6">2.4 Project Structure Overview</h3>
+            <p class="text-gray-700 mb-2">
+                The core library structure for reference:
+            </p>
+            <pre><code>
+ng-im-form-bootstrap/
+|-- src/
+|   |-- components/       // UI components for sections and fields
+|   |-- core/             // Initialization and state logic
+|   |-- drag-drop/        // Reordering logic
+|   |-- styles/           // Core Bootstrap 5 overrides
+|   |-- index.ts          // Main entry point
+|-- dist/                 // Compiled distribution files
+|-- package.json
+|-- README.md             // Primary documentation file
+            </code></pre>
+        </section>
+
+        <!-- Key Concepts -->
+        <section id="concepts" class="mb-12 pt-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4 border-b pb-2">3. Key Concepts</h2>
+            <p class="text-gray-700 mb-6">
+                The form structure revolves around two primary components: Sections and Form Fields.
+            </p>
+
+            <!-- Multiple Sections -->
+            <section id="sections" class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">3.1 Multiple Sections</h3>
+                <p class="text-gray-700">
+                    Forms can be organized into one or more named sections. This modular approach helps manage
+                    complexity for large surveys or data entry systems, logically grouping related fields.
+                </p>
+                <div class="mt-4 p-4 bg-gray-100 rounded-lg border border-gray-200">
+                    <p class="font-semibold text-gray-800">Visual Component:</p>
+                    <p class="text-sm text-gray-600">Sections are typically rendered as collapsible panels or distinct
+                        tabs in the user interface.</p>
+                </div>
+            </section>
+
+            <!-- Form Fields -->
+            <section id="fields" class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">3.2 Form Fields</h3>
+                <p class="text-gray-700 mb-4">
+                    Within each section, users can insert various field types to capture different kinds of data:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                    <li><strong class="font-semibold">Text Inputs:</strong> Standard single-line data (e.g., Name,
+                        Email).</li>
+                    <li><strong class="font-semibold">Text Areas:</strong> Multi-line text for detailed responses or
+                        comments.</li>
+                    <li><strong class="font-semibold">Select Boxes:</strong> Drop-down menus for selecting one option
+                        from a predefined list.</li>
+                    <li><strong class="font-semibold">Radio Button Groups:</strong> For selecting a single option from a
+                        small group of choices.</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- Usage -->
+        <section id="usage" class="mb-12 pt-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4 border-b pb-2">4. Usage</h2>
+
+            <!-- Drag & Drop -->
+            <section id="drag-drop" class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">4.1 Drag & Drop Functionality</h3>
+                <p class="text-gray-700 mb-4">
+                    The library provides total flexibility through an intuitive drag-and-drop mechanism. Users can
+                    rearrange both the major structural elements and the individual fields:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 pl-4">
+                    <li><strong class="font-semibold">Reorder Sections:</strong> Change the sequence of major form
+                        groups.</li>
+                    <li><strong class="font-semibold">Reorder Fields:</strong> Adjust the placement of fields within
+                        their respective sections.</li>
+                </ul>
+            </section>
+
+            <!-- JSON Submission -->
+            <section id="json-output" class="mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-3">4.2 JSON Submission</h3>
+                <p class="text-gray-700 mb-4">
+                    The form's configuration and the submitted data are consistently formatted into JSON, ensuring
+                    reliable data handling.
+                </p>
+
+                <h4 class="text-xl font-bold text-gray-900 mb-2">Example JSON Output:</h4>
+                <pre><code>
+{
+  "form_id": "survey-2025-q1",
+  "sections": [
+    {
+      "section_id": "personal_info",
+      "fields": [
+        {
+          "field_name": "fullName",
+          "field_type": "text",
+          "value": "Jane Doe"
+        },
+        // ... other fields
+      ]
+    },
+    // ... other sections
+  ],
+  "submission_timestamp": "2025-10-27T10:00:00Z"
+}
+                </code></pre>
+            </section>
+        </section>
+
+        <!-- Use Cases -->
+        <section id="use-cases" class="mb-12 pt-12">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-4 border-b pb-2">5. Ideal Use Cases</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-5 bg-white rounded-lg shadow-lg border-t-4 border-primary-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Custom Form Builders</h3>
+                    <p class="text-gray-600 text-sm">Empower users to design forms for public use or internal data
+                        collection, with instant deployment.</p>
+                </div>
+                <div class="p-5 bg-white rounded-lg shadow-lg border-t-4 border-primary-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Survey Generators</h3>
+                    <p class="text-gray-600 text-sm">Create and manage detailed, multi-page surveys with complex
+                        conditional logic (to be implemented).</p>
+                </div>
+                <div class="p-5 bg-white rounded-lg shadow-lg border-t-4 border-primary-600">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dynamic Data Entry Systems</h3>
+                    <p class="text-gray-600 text-sm">Build interfaces where the required input fields change based on
+                        operational context or project requirements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Notice -->
+        <footer class="mt-16 border-t pt-6 text-center text-gray-500 text-sm">
+            NG IM FORM is built on the principles of modularity and responsiveness, providing a seamless user experience
+            across all devices.
+        </footer>
+    </div>
+
+</body>
+
+</html>
