@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG IM FORM powered by Bootstrap - Docs</title>
+
+    <!-- Bootstrap CSS (using CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#sidebarNav" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+    tabindex="0">
+
+    <!-- Header / Navigation Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+            <div class="container-fluid container-lg">
+                <a class="navbar-brand fs-4 fw-bold text-light" href="index.html">NG IM FORM powered by
+                    Bootstrap</a>
+                <a class="btn btn-outline-light btn-sm" href="index.html">Go to Homepage</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Documentation Layout -->
+    <div class="container-fluid">
+        <div class="row doc-div">
+
+            <!-- Sidebar Navigation (Hidden on small screens) -->
+            <nav id="sidebarNav" class="col-md-3 col-lg-2 d-none d-md-block bg-white sidebar shadow-sm">
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action" href="#introduction">1. Introduction</a>
+                    <a class="list-group-item list-group-item-action" href="#installation">2. Installation</a>
+                    <a class="list-group-item list-group-item-action" href="#core-concepts">3. Core Concepts</a>
+                    <a class="list-group-item list-group-item-action" href="#drag-drop">4. Drag & Drop Reordering</a>
+                    <a class="list-group-item list-group-item-action" href="#json-output">5. JSON Output Structure</a>
+                </div>
+            </nav>
+
+            <!-- Main Content Area -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-5">
+
+                <h1 class="display-4 fw-bold text-dark mb-4">NG IM FORM powered by Bootstrap Docs</h1>
+                <p class="lead text-secondary">
+                    Build powerful, runtime-configurable forms instantly. NG IM FORM leverages the clean, modern look of
+                    Bootstrap 5.
+                </p>
+
+                <hr class="my-5">
+
+                <!-- 1. Introduction -->
+                <section id="introduction" class="mb-5">
+                    <h2 class="fw-bold text-indigo">Introduction to NG IM FORM powered by Bootstrap</h2>
+                    The NG IM FORM powered by Bootstrap enables developers to create dynamic and configurable forms at
+                    runtime.
+                    It provides a visual interface where users can add multiple sections, and within each section, they
+                    can insert form fields such as text inputs, text areas, select boxes, and radio button groups.
+
+                    Each section and field can be reordered via drag-and-drop, offering total flexibility in form
+                    layout.
+                    The library is built with Bootstrap 5 for a clean, modern, and fully responsive look.
+                </section>
+
+                <hr class="my-5">
+
+                <!-- 2. Installation -->
+                <section id="installation" class="mb-5">
+                    <h2 class="fw-bold text-indigo">Installation</h2>
+                    <p>
+                        Install the library and its required peer dependencies via npm. Use the following commands:
+                    </p>
+
+                    <h3 class="fs-5 mt-4">NPM Installation</h3>
+                    <pre><code class="language-bash">npm install ng-im-form-bootstrap</code></pre>
+                    <pre><code class="language-bash">npm install bootstrap@5.3.8</code></pre>
+                    <pre><code class="language-bash">npm install @fortawesome/fontawesome-free@7.1.0</code></pre>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="configure-styles" class="mb-5">
+                    <h2 class="fw-bold text-indigo">
+                        Configure Styles
+                    </h2>
+                    <p>
+                        Add Bootstrap and Font Awesome styles to your global configuration in
+                        <strong>angular.json</strong>:
+                    </p>
+
+                    <pre><code class="language-json">"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+    "src/styles.css"
+],
+"scripts": []</code></pre>
+
+                    <p>
+                        Alternatively, if you prefer to import styles directly in your <strong>global
+                            stylesheet</strong> (styles.scss or
+                        styles.css):
+                    </p>
+
+                    <pre><code class="language-css">@import "bootstrap/dist/css/bootstrap.min.css";
+@import "@fortawesome/fontawesome-free/css/all.min.css";</code></pre>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="import-the-module-library" class="mb-5">
+                    <h2 class="fw-bold text-indigo">
+                        Import the Library Module
+                    </h2>
+                    <p>
+                        In your main app module <code>(app.module.ts)</code>, import the
+                        <code>FormBuilderModule</code>
+                        or
+                        <code>FormPreviewModule</code>:
+                    </p>
+
+                    <pre><code>import { FormBuilderModule } from 'ng-im-form-bootstrap';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    FormBuilderModule
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}</code></pre>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="verify-installation" class="mb-5">
+                    <h2 class="fw-bold text-indigo">
+                        Verify Installation
+                    </h2>
+                    <p>
+                        Once installed, you can use the component selector in any template:
+                    </p>
+
+                    <pre><code class="language-html">&lt;app-form-builder [preset]="null"&gt;&lt;app-form-builder&gt;</code></pre>
+
+                    <p>
+                        If you see Bootstrap styling and Font Awesome icons properly rendered, your setup is complete.
+                    </p>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="form-builder-module" class="mb-5">
+                    <h2 class="fw-bold text-indigo">
+                        Form Builder Module — ng-im-form-bootstrap
+                    </h2>
+                    <p>
+                        The <strong>Form Builder Module</strong> helps you build fully customizable, dynamic forms with
+                        ease.
+                        It is a part of the <code>ng-im-form-bootstrap</code> library.
+                    </p>
+
+
+                    <h5 class="mt-4 fw-bold text-indigo">
+                        Getting Started
+                    </h5>
+                    <hr>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            1. Import the Module
+                        </h5>
+                        <p>
+                            To use the form builder, import <code>FormBuilderModule</code> into your application’s
+                            module where you
+                            want to use it.
+                        </p>
+
+                        <p>
+                            Example – <code>app.module.ts</code>:
+                        </p>
+
+                        <pre><code class="language-typescript">import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormBuilderModule } from 'ng-im-form-bootstrap';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, FormBuilderModule],
+  bootstrap: [AppComponent],
+})
+export class AppModule {}</code></pre>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            2. Use the Component
+                        </h5>
+                        <p>
+                            To use the <strong>Form Builder Component</strong>, include the
+                            <code>ng-im-form-builder</code> selector
+                            in your
+                            component’s HTML file.
+                        </p>
+
+                        <p>
+                            Example – <code>app.component.html</code>:
+                        </p>
+
+                        <pre><code class="language-typescript">&lt;ng-im-form-builder
+  [preset]="null"
+  (publishFormEvent)="storeNewForm($event)"&gt;
+&lt;/ng-im-form-builder&gt;</code></pre>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            Component Details (Input)
+                        </h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Input Name</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>preset</code>
+                                        </td>
+                                        <td>
+                                            <code>INgImHorizontalFormModel</code>
+                                        </td>
+                                        <td>
+                                            The form structure object. Use this when editing or updating an existing
+                                            form.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <code>isPublishing</code>
+                                        </td>
+                                        <td>
+                                            <code>boolean</code>
+                                        </td>
+                                        <td>
+                                            Controls whether a loading spinner is shown while publishing (saving) the
+                                            form.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            Component Details (Output)
+                        </h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Output Event</th>
+                                        <th>Emit Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <code>publishFormEvent</code>
+                                        </td>
+                                        <td>
+                                            <code>INgImHorizontalFormModel</code>
+                                        </td>
+                                        <td>
+                                            Emits the created form structure. You can handle this event to save the form
+                                            data to your backend.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            Data Models
+                        </h5>
+
+                        <p>Below are the interface definitions used by the <strong>Form Builder Module</strong>.</p>
+
+                        <h5><code>INgImHorizontalFormModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImHorizontalFormModel {
+  checkValidations: boolean;
+  isResetButtonAvailable: boolean;
+  submitAPIUrl: string;
+  method: APIMethodsEnum;
+  sendBodyAs: SendBodyTypesEnum;
+  responseMessages: {
+    onSuccess: {
+      title: string;
+      subTitle: string;
+    };
+    onFailed: {
+      title: string;
+      subTitle: string;
+    };
+  };
+  sections: INgImHorizonatalFormSectionModel[];
+}</code></pre>
+
+                        <h5><code>INgImHorizonatalFormSectionModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImHorizonatalFormSectionModel {
+  id: string;
+  title: string;
+  subTitle: string;
+  class: string;
+  headerClass: string;
+  bodyClass: string;
+  elements: INgImFormElementModel[];
+}</code></pre>
+
+                        <h5><code>INgImFormElementModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormElementModel {
+  type: string;
+  textBoxComponent?: INgImFormTextBoxModel | null;
+  textAreaComponent?: INgImFormTextAreaModel | null;
+  selectBoxComponent?: INgImFormSelectBoxModel | null;
+  fileFieldComponent?: INgImFormFileFieldModel | null;
+  checkBoxComponent?: INgImFormCheckBoxModel | null;
+  radioButtonGroupComponent?: INgImFormRadioButtonGroupModel | null;
+  imageBoxComponent?: INgImFormImageBoxModel | null;
+  textComponent?: INgImFormTextModel | null;
+}</code></pre>
+
+                        <h5><code>INgImFormTextBoxModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormTextBoxModel {
+  id: string;
+  name: string;
+  label: string;
+  type: string;
+  placeholder: string;
+  class: string;
+  validationErrorClass: string;
+  value: string;
+  isReadOnly: boolean;
+  isHidden: boolean;
+  isRequired: boolean;
+  requiredMessage: string | null;
+  validations:
+    | {
+        type: string;
+        min?: number | null;
+        max?: number | null;
+        minChar?: number | null;
+        maxChar?: number | null;
+        message: string;
+      }[]
+    | null;
+  regexValidation: {
+    expression: string;
+    message: string;
+  } | null;
+}</code></pre>
+
+                        <h5><code>INgImFormTextAreaModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormTextAreaModel {
+  id: string;
+  name: string;
+  label: string;
+  placeholder: string;
+  class: string;
+  validationErrorClass: string;
+  rows: number;
+  columns: number | null;
+  value: string;
+  isReadOnly: boolean;
+  isHidden: boolean;
+  isRequired: boolean;
+  requiredMessage: string | null;
+  validations:
+    | {
+        type: string;
+        minChar?: number | null;
+        maxChar?: number | null;
+        message: string;
+      }[]
+    | null;
+  regexValidation: {
+    expression: string;
+    message: string;
+  } | null;
+}</code></pre>
+
+                        <h5><code>INgImFormFileFieldModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormFileFieldModel {
+  id: string;
+  name: string;
+  label: string;
+  class: string;
+  validationErrorClass: string;
+  accept: string;
+  isMultiple: boolean;
+  isReadOnly: boolean;
+  isHidden: boolean;
+  isRequired: boolean;
+  requiredMessage: string | null;
+  sizeValidation: {
+    size: number;
+    message: string;
+  } | null;
+  extensionValidations:
+    | {
+        extension: string;
+        message: string;
+      }[]
+    | null;
+}</code></pre>
+
+                        <h5><code>INgImFormSelectBoxModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormSelectBoxModel {
+  id: string;
+  name: string;
+  label: string;
+  placeholder: string;
+  class: string;
+  validationErrorClass: string;
+  isMultiple: boolean;
+  isReadOnly: boolean;
+  isHidden: boolean;
+  isRequired: boolean;
+  requiredMessage: string | null;
+  options:
+    | {
+        selected: boolean;
+        value: string;
+        text: string;
+      }[]
+    | null;
+}</code></pre>
+
+                        <h5><code>INgImFormCheckBoxModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormCheckBoxModel {
+  id: string;
+  name: string;
+  label: string;
+  class: string;
+  validationErrorClass: string;
+  checked: boolean;
+  isReadOnly: boolean;
+  isHidden: boolean;
+  isRequired: boolean;
+  requiredMessage: string | null;
+}</code></pre>
+
+                        <h5><code>INgImFormRadioButtonGroupModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormRadioButtonGroupModel {
+  id: string;
+  name: string;
+  label: string;
+  class: string;
+  validationErrorClass: string;
+  isReadOnly: boolean;
+  isHidden: boolean;
+  isRequired: boolean;
+  requiredMessage: string | null;
+  radioButtons:
+    | {
+        checked: boolean;
+        value: string;
+        text: string;
+      }[]
+    | null;
+}</code></pre>
+
+                        <h5><code>INgImFormImageBoxModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormImageBoxModel {
+  id: string;
+  order: number;
+  name: string;
+  class: string;
+  userDefinedId: string;
+  url: string;
+  alt: string;
+  height: number;
+  width: number;
+  alignment: string;
+}</code></pre>
+
+                        <h5><code>INgImFormTextModel</code></h5>
+
+                        <pre><code class="language-typescript">export interface INgImFormTextModel {
+  id: string;
+  order: number;
+  name: string;
+  class: string;
+  userDefinedId: string;
+  text: string;
+  alignment: string;
+}</code></pre>
+                    </section>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="form-preview-module" class="mb-5">
+                    <h2 class="fw-bold text-indigo">Using Form Preview</h2>
+                    <p>
+                        To <strong>view and use</strong> the form created by the Form Builder, you need to use the
+                        <strong>Form
+                            Preview Module</strong>.
+                    </p>
+
+                    <h5 class="mt-4 fw-bold text-indigo">
+                        Getting Started
+                    </h5>
+                    <hr>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            1: Import the Module
+                        </h5>
+                        <p>
+                            First, import the <code>FormPreviewModule</code> into the module where you want to use the
+                            Form Preview
+                            feature.
+                        </p>
+
+                        <p>
+                            Example – <code>app.module.ts</code>:
+                        </p>
+
+                        <pre><code class="language-typescript">import { FormBuilderModule, FormPreviewModule } from 'ng-im-form-bootstrap';
+
+@NgModule({
+  imports: [
+    FormPreviewModule,
+  ],
+  providers: [
+    provideHttpClient(),
+  ]
+})
+export class AppModule { }</code></pre>
+
+                        <p class="text-danger">Note: You must provide Angular’s built-in HTTP Client because it’s
+                            required to submit the
+                            created form.</p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            2: Use the Component
+                        </h5>
+                        <p>
+                            Now, use the <strong>Form Preview Component</strong> Selector in your component’s HTML file.
+                        </p>
+
+                        <p>
+                            Example – <code>app.component.html</code>:
+                        </p>
+
+                        <pre><code class="language-html">&lt;ng-im-form-preview [preset]="form"&gt;&lt;/ng-im-form-preview&gt;</code></pre>
+
+                        <p>You’re now ready to preview and submit the forms created using the Form Builder!</p>
+                    </section>
+
+                    <section class="mb-5">
+                        <h5 class="fw-bold text-indigo">
+                            Component Details (Input)
+                        </h5>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Input Name</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>preset</code></td>
+                                        <td><code>INgImHorizontalFormModel</code></td>
+                                        <td>The form structure object. Use this to view the created form.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="introduction" class="mb-5">
+                    <h2 class="fw-bold text-indigo">Final Notes</h2>
+                    <p>Congratulations! You’ve successfully learned how to build, preview, and publish dynamic forms
+                        using the <code>ng-im-form-bootstrap library.</code></p>
+
+                    <p>With just a few simple steps, you can now:</p>
+
+                    <ul>
+                        <li><strong>Create</strong> fully customizable forms using the Form Builder module.</li>
+                        <li><strong>Preview</strong> and <strong>interact</strong> with those forms using the Form
+                            Preview module.
+                        </li>
+                        <li><strong>Handle</strong> and <strong>save</strong> form data seamlessly through your backend
+                            API.</li>
+                    </ul>
+                </section>
+
+                <hr class="my-5">
+
+                <section id="introduction" class="mb-5">
+                    <h2 class="fw-bold text-indigo">Next Steps
+                    </h2>
+
+                    <ul>
+                        <li>Contribute or report issues on GitHub to help improve this project.</li>
+                        <li>Stay tuned for upcoming modules and enhancements!
+                        </li>
+                    </ul>
+                </section>
+
+                <hr class="my-5">
+
+                <div>
+                    ❤️ <b>Thank You</b> for Using <code>ng-im-form-bootstrap</code>
+                    If you find this library helpful, please consider giving it a ⭐ on <a
+                        href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap">GitHub!</a>
+                    Your support helps make it better for everyone. 🙌
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <div clas></div>
+
+    <!-- Bootstrap JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
