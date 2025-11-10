@@ -1,231 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NG IM FORM powered by Bootstrap</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body class="text-body">
-
+  <body class="text-body">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo.png" alt="Bootstrap" width="50" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="d-flex justify-content-between" style="width: 100%;">
-                    <div>
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Docs</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">View Demo</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <button class="btn btn-light">Github</button>
-                        <button class="btn btn-light">Linked In</button>
-                        <button class="btn btn-light">NPM</button>
-                    </div>
-                </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.png" alt="Bootstrap" width="50" height="50" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex justify-content-between" style="width: 100%">
+            <div>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#">Docs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">View Demo</a>
+                </li>
+              </ul>
             </div>
+
+            <div>
+              <button class="btn btn-light">
+                <i class="fa-brands fa-github"></i>
+              </button>
+              <button class="btn btn-light">
+                <i class="fa-brands fa-linkedin"></i>
+              </button>
+              <button class="btn btn-light">
+                <i class="fa-brands fa-npm"></i>
+              </button>
+            </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero bg-deep-green-light">
-        <div class="container text-center">
-            <h1 class="display-4 fw-bolder text-dark mb-4">
-                The Dynamic Angular Form Builder <span class="text-deep-green">Powered by Bootstrap</span>
-            </h1>
-            <p class="fs-5 text-secondary mx-auto mb-5" style="max-width: 650px;">
-                A flexible and elegant Angular UI library for building submittable dynamic forms — powered by Bootstrap
-                styling and drag-and-drop organization.
-                Easily create and manage form structures without writing a single line of code.
-            </p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#features" class="btn btn-deep-green btn-lg rounded-3 shadow-lg">
-                    Explore Features
-                </a>
-                <a href="#" class="btn btn-outline-deep-green btn-lg rounded-3 text-deep-green">
-                    View Demo
-                </a>
-            </div>
+      <div class="container text-center">
+        <h1 class="display-4 fw-bolder text-dark mb-4">
+          A Dynamic
+          <span class="text-success"
+            >Angular Form Builder Powered by Bootstrap</span
+          >
+        </h1>
+        <p class="fs-5 text-secondary mx-auto mb-5" style="max-width: 650px">
+          A flexible and elegant Angular UI library for building submittable
+          dynamic forms — powered by Bootstrap.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a
+            href="#features"
+            class="btn btn-success btn-lg rounded-3 shadow-lg"
+          >
+            Get Started
+          </a>
+          <a href="#" class="btn btn-outline-success btn-lg rounded-3">
+            View Demo
+          </a>
         </div>
+      </div>
     </section>
 
-    <!-- Core Features Section -->
-    <section id="features" class="py-5 py-md-5 bg-white">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="text-uppercase text-deep-green fs-6 fw-semibold">Total Controls</h2>
-                <p class="display-6 fw-bold text-dark">
-                    Key Features for this Library
-                </p>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-                <!-- Feature 1: Multiple Sections -->
-                <div class="col">
-                    <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-                        <svg class="h-10 w-10 text-deep-green mb-3" width="40" height="40" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16m-7 6h7" />
-                        </svg>
-                        <h3 class="fs-5 fw-bold text-dark mb-2">Dynamic Section Management</h3>
-                        <p class="text-secondary">
-                            Add, rename, and remove multiple form sections.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 2: Versatile Fields -->
-                <div class="col">
-                    <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-                        <svg class="h-10 w-10 text-deep-green mb-3" width="40" height="40" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                        </svg>
-                        <h3 class="fs-5 fw-bold text-dark mb-2">Configurable Field Settings</h3>
-                        <p class="text-secondary">
-                            Set labels, placeholders, validations, and default values.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 3: Drag-and-Drop -->
-                <div class="col">
-                    <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-                        <svg class="h-10 w-10 text-deep-green mb-3" width="40" height="40" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
-                        </svg>
-                        <h3 class="fs-5 fw-bold text-dark mb-2">Total Reordering Flexibility</h3>
-                        <p class="text-secondary">
-                            Reorder sections and fields via intuitive drag-and-drop controls.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Feature 4: JSON Output -->
-                <div class="col">
-                    <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-                        <svg class="h-10 w-10 text-deep-green mb-3" width="40" height="40" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M10 20l4-16m4 4l4 4-4 4m-14-4l-4 4 4 4" />
-                        </svg>
-                        <h3 class="fs-5 fw-bold text-dark mb-2">JSON Object Export/Import</h3>
-                        <p class="text-secondary">
-                            Save or load form structures easily.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <section id="features" class="features-section bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1>
+            <b><span class="text-success">Key Features</span></b> for this
+            Library
+          </h1>
         </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                Dynamic Section Management
+              </h3>
+              <p class="text-secondary">
+                Add, rename, and remove multiple form sections.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+              </svg>
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                Configurable Field Settings
+              </h3>
+              <p class="text-secondary">
+                Set labels, placeholders, validations, and default values.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 9l4-4 4 4m0 6l-4 4-4-4"
+                />
+              </svg>
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                Total Reordering Flexibility
+              </h3>
+              <p class="text-secondary">
+                Reorder sections and fields via intuitive drag-and-drop
+                controls.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4m-14-4l-4 4 4 4"
+                />
+              </svg>
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                JSON Object Export/Import
+              </h3>
+              <p class="text-secondary">Save or load form structures easily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Use Cases Section -->
-    <section id="usecases" class="py-5 py-md-5 bg-deep-green-light">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="text-uppercase text-deep-green fs-6 fw-semibold">Where it Shines</h2>
-                <p class="display-6 fw-bold text-dark">
-                    Ideal Scenarios for NG IM FORM
-                </p>
-            </div>
-            <div class="mx-auto" style="max-width: 800px;">
-                <ul class="list-unstyled space-y-4">
-                    <!-- Use Case 1 -->
-                    <li class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4">
-                        <div class="flex-shrink-0 me-3">
-                            <svg class="text-deep-green" width="32" height="32" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V6m3 10h6l-3-6 3-6H9l3 6-3 6z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="fs-5 fw-semibold text-dark mb-1">Custom Form Builders</p>
-                            <p class="text-secondary mb-0">
-                                Empower your users to design and deploy their own sophisticated data capture forms
-                                without writing code.
-                            </p>
-                        </div>
-                    </li>
-                    <!-- Use Case 2 -->
-                    <li class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4">
-                        <div class="flex-shrink-0 me-3">
-                            <svg class="text-deep-green" width="32" height="32" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="fs-5 fw-semibold text-dark mb-1">Survey Generators</p>
-                            <p class="text-secondary mb-0">
-                                Create highly customizable and branching survey tools that adapt to user input in
-                                real-time.
-                            </p>
-                        </div>
-                    </li>
-                    <!-- Use Case 3 -->
-                    <li class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm">
-                        <div class="flex-shrink-0 me-3">
-                            <svg class="text-deep-green" width="32" height="32" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 7v10h16V7a2 2 0 00-2-2H6a2 2 0 00-2 2z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <p class="fs-5 fw-semibold text-dark mb-1">Dynamic Data Entry Systems</p>
-                            <p class="text-secondary mb-0">
-                                Perfect for enterprise applications requiring flexible, user-defined schemas for data
-                                collection.
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <section id="usecases" class="ideal-scenarios bg-deep-green-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1>
+            <b><span class="text-success">Ideal Scenarios</span></b> for NG IM
+            FORM
+          </h1>
         </div>
+        <div class="mx-auto" style="max-width: 800px">
+          <ul class="list-unstyled space-y-4">
+            <li
+              class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4"
+            >
+              <div class="flex-shrink-0 me-3">
+                <svg
+                  class="text-success"
+                  width="50"
+                  height="50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V6m3 10h6l-3-6 3-6H9l3 6-3 6z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 fw-semibold text-dark mb-1">
+                  Custom Form Builders
+                </p>
+                <p class="text-secondary mb-0">
+                  Empower your users to design and deploy their own
+                  sophisticated data capture forms without writing code.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4"
+            >
+              <div class="flex-shrink-0 me-3">
+                <svg
+                  class="text-success"
+                  width="50"
+                  height="50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 fw-semibold text-dark mb-1">Survey Generators</p>
+                <p class="text-secondary mb-0">
+                  Create highly customizable and branching survey tools that
+                  adapt to user input in real-time.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm"
+            >
+              <div class="flex-shrink-0 me-3">
+                <svg
+                  class="text-success"
+                  width="50"
+                  height="50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 7v10h16V7a2 2 0 00-2-2H6a2 2 0 00-2 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 fw-semibold text-dark mb-1">
+                  Dynamic Data Entry Systems
+                </p>
+                <p class="text-secondary mb-0">
+                  Perfect for enterprise applications requiring flexible,
+                  user-defined schemas for data collection.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 py-md-5">
-        <div class="container text-center">
-            <div class="mb-3">
-                <a href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
-                    class="fs-5 fw-bold text-deep-green" style="text-decoration: none;">NG IM FORM powered by
-                    Bootstrap</a>
-            </div>
-            <p class="text-secondary small mb-0">&copy; 2025 NG IM FORM. All rights reserved. Built with Bootstrap 5.
-            </p>
+      <div class="container text-center">
+        <div class="mb-3">
+          <a
+            href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
+            class="fs-5 fw-bold text-deep-green"
+            style="text-decoration: none"
+            >NG IM FORM powered by Bootstrap</a
+          >
         </div>
+        <p class="text-secondary small mb-0">
+          &copy; 2025 NG IM FORM. All rights reserved. Built with Bootstrap 5.
+        </p>
+      </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

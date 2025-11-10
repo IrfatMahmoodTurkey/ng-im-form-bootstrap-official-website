@@ -3,7 +3,6 @@
 body {
   font-family: "Inter", sans-serif;
   background-color: #f8fafc;
-  /* Light gray background */
 }
 
 .hero {
@@ -16,24 +15,14 @@ body {
   width: 3rem !important;
 }
 
-.text-deep-green {
-  color: #00899e;
-}
-
 .bg-deep-green-light {
   background-color: #eef2ff;
 }
 
-.btn-deep-green {
-  background-color: #00899e;
-  border-color: #00899e;
-  color: white;
-}
-
-.btn-deep-green:hover {
-  background-color: #00899e;
-  border-color: #00899e;
-  color: white;
+.features-section,
+.ideal-scenarios {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
 }
 
 .card-feature {
@@ -44,41 +33,4 @@ body {
 .card-feature:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   transform: translateY(-5px);
-}
-
-/* Sticky Sidebar for desktop */
-.sidebar {
-  position: sticky;
-  top: 56px;
-  /* Below the fixed navbar */
-  height: calc(100vh - 56px);
-  overflow-y: auto;
-  padding-top: 1rem;
-}
-
-/* Ensure list group links use theme color */
-.list-group-item.active {
-  background-color: #4f46e5;
-  border-color: #4f46e5;
-}
-
-.list-group-item {
-  border-left: 3px solid transparent;
-}
-
-.list-group-item:hover {
-  border-left: 3px solid #4f46e5;
-}
-
-/* Code blocks */
-pre {
-  background-color: #212529;
-  color: #d1d5db;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-}
-
-.doc-div {
-  margin-top: 4rem !important;
 }
