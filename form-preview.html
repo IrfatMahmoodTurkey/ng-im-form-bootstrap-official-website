@@ -151,10 +151,10 @@ export class AppModule { }</code></pre>
                         </table>
                     </div>
 
-                    <!-- <br>
+                    <br>
 
-                    <h5 class="text-success">Output</h5> -->
-                    <!-- <div class="table-responsive">
+                    <h5 class="text-success">Output</h5>
+                    <div class="table-responsive">
                         <table class="table table-bordered">
                             <thead>
                                 <tr class="table-success">
@@ -166,19 +166,52 @@ export class AppModule { }</code></pre>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <code>publishFormEvent</code>
+                                        <code>onSubmitEvent</code>
                                     </td>
                                     <td>
-                                        <code>INgImHorizontalFormModel</code>
+                                        <code>any</code>
                                     </td>
                                     <td>
-                                        Emits the created form structure. You can handle this event to save the form
-                                        data to your backend.
+                                        Emits the Submit object when the Submit button is clicked.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>onSubmitProcessing</code>
+                                    </td>
+                                    <td>
+                                        <code>any</code>
+                                    </td>
+                                    <td>
+                                        Emits the Submit object when the submission process begins.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>onSubmitSuccess</code>
+                                    </td>
+                                    <td>
+                                        <code>any</code>
+                                    </td>
+                                    <td>
+                                        Emits the Submit object when the submission process succeeds.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>onSubmitError</code>
+                                    </td>
+                                    <td>
+                                        <code>HttpErrorResponse</code>
+                                    </td>
+                                    <td>
+                                        Emits Angular's HttpErrorResponse object when the submission process encounters
+                                        any error returned from the API.
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div> -->
+                    </div>
                 </section>
 
                 <hr>
