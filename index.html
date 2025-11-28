@@ -1,295 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NG IM FORM powered by Bootstrap</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NG IM FORM powered by Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-</head>
-
-<body class="text-body">
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="assets/logo.png" alt="Bootstrap" width="50" height="50" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="d-flex justify-content-between" style="width: 100%">
-          <div>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="installation.html">Docs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
-                  target="_blank">View Demo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contribution.html">Contribution Guideline</a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <a class="btn btn-light" href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap" target="_blank">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a class="btn btn-light" href="https://www.linkedin.com/in/irfatmahmoodturkey/" target="_blank">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a class="btn btn-light" href="notfound">
-              <i class="fa-brands fa-npm"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <section class="hero bg-deep-green-light">
-    <div class="container text-center">
-      <h1 class="display-4 fw-bolder text-dark mb-4">
-        A Dynamic
-        <span class="text-success">Angular Form Builder Powered by Bootstrap</span>
-      </h1>
-      <p class="fs-5 text-secondary mx-auto mb-5" style="max-width: 650px">
-        A flexible and elegant Angular UI library for building submittable
-        dynamic forms — powered by Bootstrap.
-      </p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="#get-started" class="btn btn-success btn-lg rounded-3 shadow-lg">
-          Get Started
+  <body class="text-body">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/logo.png" alt="Bootstrap" width="50" height="50" />
         </a>
-        <a href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo" target="_blank"
-          class="btn btn-outline-success btn-lg rounded-3">
-          View Docs
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="features-section bg-white">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h1>
-          <b><span class="text-success">Key Features</span></b> for this
-          Library
-        </h1>
-      </div>
-
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-        <div class="col">
-          <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-            <svg class="h-10 w-10 text-success mb-3" width="50" height="50" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-
-            <h3 class="fs-5 fw-bold text-dark mb-2">
-              Dynamic Section Management
-            </h3>
-            <p class="text-secondary">
-              Add, rename, and remove multiple form sections.
-            </p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-            <svg class="h-10 w-10 text-success mb-3" width="50" height="50" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-            </svg>
-            <h3 class="fs-5 fw-bold text-dark mb-2">
-              Configurable Field Settings
-            </h3>
-            <p class="text-secondary">
-              Set labels, placeholders, validations, and default values.
-            </p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-            <svg class="h-10 w-10 text-success mb-3" width="50" height="50" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
-            </svg>
-            <h3 class="fs-5 fw-bold text-dark mb-2">
-              Total Reordering Flexibility
-            </h3>
-            <p class="text-secondary">
-              Reorder sections and fields via intuitive drag-and-drop
-              controls.
-            </p>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0">
-            <svg class="h-10 w-10 text-success mb-3" width="50" height="50" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M10 20l4-16m4 4l4 4-4 4m-14-4l-4 4 4 4" />
-            </svg>
-            <h3 class="fs-5 fw-bold text-dark mb-2">
-              JSON Object Export/Import
-            </h3>
-            <p class="text-secondary">Save or load form structures easily.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ideal-scenarios bg-deep-green-light">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h1>
-          <b><span class="text-success">Ideal Scenarios</span></b> for NG IM
-          FORM
-        </h1>
-      </div>
-      <div class="mx-auto" style="max-width: 800px">
-        <ul class="list-unstyled space-y-4">
-          <li class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4">
-            <div class="flex-shrink-0 me-3">
-              <svg class="text-success" width="50" height="50" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V6m3 10h6l-3-6 3-6H9l3 6-3 6z" />
-              </svg>
-            </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex justify-content-between" style="width: 100%">
             <div>
-              <p class="fs-5 fw-semibold text-dark mb-1">
-                Custom Form Builders
-              </p>
-              <p class="text-secondary mb-0">
-                Empower your users to design and deploy their own
-                sophisticated data capture forms without writing code.
-              </p>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    aria-current="page"
+                    href="installation.html"
+                    >Docs</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
+                    target="_blank"
+                    >View Demo</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contribution.html"
+                    >Contribution Guideline</a
+                  >
+                </li>
+              </ul>
             </div>
-          </li>
 
-          <li class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4">
-            <div class="flex-shrink-0 me-3">
-              <svg class="text-success" width="50" height="50" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
             <div>
-              <p class="fs-5 fw-semibold text-dark mb-1">Survey Generators</p>
-              <p class="text-secondary mb-0">
-                Create highly customizable and branching survey tools that
-                adapt to user input in real-time.
-              </p>
+              <a
+                class="btn btn-light"
+                href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
+                target="_blank"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a
+                class="btn btn-light"
+                href="https://www.linkedin.com/in/irfatmahmoodturkey/"
+                target="_blank"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                class="btn btn-light"
+                href="https://www.npmjs.com/package/ng-im-form-bootstrap"
+              >
+                <i class="fa-brands fa-npm"></i>
+              </a>
             </div>
-          </li>
-
-          <li class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm">
-            <div class="flex-shrink-0 me-3">
-              <svg class="text-success" width="50" height="50" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 7v10h16V7a2 2 0 00-2-2H6a2 2 0 00-2 2z" />
-              </svg>
-            </div>
-            <div>
-              <p class="fs-5 fw-semibold text-dark mb-1">
-                Dynamic Data Entry Systems
-              </p>
-              <p class="text-secondary mb-0">
-                Perfect for enterprise applications requiring flexible,
-                user-defined schemas for data collection.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="get-started" class="features-section bg-white">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h1>
-          Get <b><span class="text-success">Started</span></b>
-        </h1>
-      </div>
-
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="get-started-icons text-success">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
           </div>
-          <h3>Installation</h3>
+        </div>
+      </div>
+    </nav>
 
-          <p>
-            Install the library and its required peer dependencies via <b>npm</b>. Use the following commands:
-          </p>
+    <section class="hero bg-deep-green-light">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bolder text-dark mb-4">
+          A Dynamic
+          <span class="text-success"
+            >Angular Form Builder Powered by Bootstrap</span
+          >
+        </h1>
+        <p class="fs-5 text-secondary mx-auto mb-5" style="max-width: 650px">
+          A flexible and elegant Angular UI library for building submittable
+          dynamic forms — powered by Bootstrap.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a
+            href="#get-started"
+            class="btn btn-success btn-lg rounded-3 shadow-lg"
+          >
+            Get Started
+          </a>
+          <a
+            href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
+            target="_blank"
+            class="btn btn-outline-success btn-lg rounded-3"
+          >
+            View Docs
+          </a>
+        </div>
+      </div>
+    </section>
 
-          <pre><code class="language-command">npm install ng-im-form-bootstrap
+    <section class="features-section bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1>
+            <b><span class="text-success">Key Features</span></b> for this
+            Library
+          </h1>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                Dynamic Section Management
+              </h3>
+              <p class="text-secondary">
+                Add, rename, and remove multiple form sections.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                />
+              </svg>
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                Configurable Field Settings
+              </h3>
+              <p class="text-secondary">
+                Set labels, placeholders, validations, and default values.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 9l4-4 4 4m0 6l-4 4-4-4"
+                />
+              </svg>
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                Total Reordering Flexibility
+              </h3>
+              <p class="text-secondary">
+                Reorder sections and fields via intuitive drag-and-drop
+                controls.
+              </p>
+            </div>
+          </div>
+
+          <div class="col">
+            <div
+              class="card card-feature p-4 rounded-3 h-100 shadow-sm border-0"
+            >
+              <svg
+                class="h-10 w-10 text-success mb-3"
+                width="50"
+                height="50"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4m-14-4l-4 4 4 4"
+                />
+              </svg>
+              <h3 class="fs-5 fw-bold text-dark mb-2">
+                JSON Object Export/Import
+              </h3>
+              <p class="text-secondary">Save or load form structures easily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ideal-scenarios bg-deep-green-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1>
+            <b><span class="text-success">Ideal Scenarios</span></b> for NG IM
+            FORM
+          </h1>
+        </div>
+        <div class="mx-auto" style="max-width: 800px">
+          <ul class="list-unstyled space-y-4">
+            <li
+              class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4"
+            >
+              <div class="flex-shrink-0 me-3">
+                <svg
+                  class="text-success"
+                  width="50"
+                  height="50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V6m3 10h6l-3-6 3-6H9l3 6-3 6z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 fw-semibold text-dark mb-1">
+                  Custom Form Builders
+                </p>
+                <p class="text-secondary mb-0">
+                  Empower your users to design and deploy their own
+                  sophisticated data capture forms without writing code.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm mb-4"
+            >
+              <div class="flex-shrink-0 me-3">
+                <svg
+                  class="text-success"
+                  width="50"
+                  height="50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 fw-semibold text-dark mb-1">Survey Generators</p>
+                <p class="text-secondary mb-0">
+                  Create highly customizable and branching survey tools that
+                  adapt to user input in real-time.
+                </p>
+              </div>
+            </li>
+
+            <li
+              class="d-flex align-items-start bg-white p-4 rounded-3 shadow-sm"
+            >
+              <div class="flex-shrink-0 me-3">
+                <svg
+                  class="text-success"
+                  width="50"
+                  height="50"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 7v10h16V7a2 2 0 00-2-2H6a2 2 0 00-2 2z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 fw-semibold text-dark mb-1">
+                  Dynamic Data Entry Systems
+                </p>
+                <p class="text-secondary mb-0">
+                  Perfect for enterprise applications requiring flexible,
+                  user-defined schemas for data collection.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="get-started" class="features-section bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1>
+            Get <b><span class="text-success">Started</span></b>
+          </h1>
+        </div>
+
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="get-started-icons text-success">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3>Installation</h3>
+
+            <p>
+              Install the library and its required peer dependencies via
+              <b>npm</b>. Use the following commands:
+            </p>
+
+            <pre><code class="language-command">npm install ng-im-form-bootstrap
 npm install bootstrap@5.3.8
 npm install @fortawesome/fontawesome-free@7.1.0</code></pre>
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="get-started-icons text-success">
-            <i class="fas fa-cog"></i>
           </div>
-          <h3>Configure Styles</h3>
 
-          <p>
-            Add Bootstrap and Font Awesome styles to your global configuration in <code>angular.json</code>:
-          </p>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="get-started-icons text-success">
+              <i class="fas fa-cog"></i>
+            </div>
+            <h3>Configure Styles</h3>
 
-          <pre><code class="language-json">"styles": [
+            <p>
+              Add Bootstrap and Font Awesome styles to your global configuration
+              in <code>angular.json</code>:
+            </p>
+
+            <pre><code class="language-json">"styles": [
   "node_modules/bootstrap/dist/css/bootstrap.min.css",
   "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
   "src/styles.css"
 ],
 "scripts": []</code></pre>
 
-          <p>
-            Alternatively, if you prefer to import styles directly in your <b>global stylesheet</b>
-            (<code>styles.scss</code> or
-            <code>styles.css</code>):
-          </p>
+            <p>
+              Alternatively, if you prefer to import styles directly in your
+              <b>global stylesheet</b> (<code>styles.scss</code> or
+              <code>styles.css</code>):
+            </p>
 
-          <pre><code class="language-css">@import "bootstrap/dist/css/bootstrap.min.css";
+            <pre><code class="language-css">@import "bootstrap/dist/css/bootstrap.min.css";
 @import "@fortawesome/fontawesome-free/css/all.min.css";</code></pre>
-        </div>
-      </div>
-
-      <div class="row mt-5">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="get-started-icons text-success">
-            <i class="fa-solid fa-file-import"></i>
           </div>
-          <h3>Import the Module</h3>
+        </div>
 
-          <p>
-            In your main app module (<code>app.module.ts</code>), import the <code>FormBuilderModule</code> or
-            <code>FormPreviewModule</code>:
-          </p>
+        <div class="row mt-5">
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="get-started-icons text-success">
+              <i class="fa-solid fa-file-import"></i>
+            </div>
+            <h3>Import the Module</h3>
 
-          <pre><code class="language-javascript">import { FormBuilderModule, FormPreviewModule } from 'ng-im-form-bootstrap';
+            <p>
+              In your main app module (<code>app.module.ts</code>), import the
+              <code>FormBuilderModule</code> or <code>FormPreviewModule</code>:
+            </p>
+
+            <pre><code class="language-javascript">import { FormBuilderModule, FormPreviewModule } from 'ng-im-form-bootstrap';
 
 @NgModule({
   imports: [
@@ -301,95 +443,125 @@ npm install @fortawesome/fontawesome-free@7.1.0</code></pre>
   bootstrap: [AppComponent]
 })
 export class AppModule {}</code></pre>
-        </div>
-
-        <div class="col-12 col-sm-12 col-md-12 col-lg-6">
-          <div class="get-started-icons text-success">
-            <i class="fas fa-check-circle"></i>
           </div>
-          <h3>Verify Installation</h3>
 
-          <p>
-            Once installed, you can use the component selector in any template:
-          </p>
+          <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="get-started-icons text-success">
+              <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Verify Installation</h3>
 
-          <pre><code class="language-html">&lt;ng-im-form-builder [preset]="null"&gt;&lt;ng-im-form-builder&gt;</code></pre>
+            <p>
+              Once installed, you can use the component selector in any
+              template:
+            </p>
 
-          <p>
-            If you see Bootstrap styling and Font Awesome icons properly rendered, your setup is complete
-          </p>
+            <pre><code class="language-html">&lt;ng-im-form-builder [preset]="null"&gt;&lt;ng-im-form-builder&gt;</code></pre>
+
+            <p>
+              If you see Bootstrap styling and Font Awesome icons properly
+              rendered, your setup is complete
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="ideal-scenarios bg-deep-green-light">
-    <div class="container">
-      <div class="text-center mb-2">
-        <h1>
-          Want to <b><span class="text-success">Explore NG IM FORM</span></b>?
-        </h1>
-      </div>
-      <div class="mx-auto" style="max-width: 800px">
-        <div class="text-center">
-          <a class="btn btn-success btn-lg" href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
-            target="_blank">Click here to Explore</a>
+    <section class="ideal-scenarios bg-deep-green-light">
+      <div class="container">
+        <div class="text-center mb-2">
+          <h1>
+            Want to <b><span class="text-success">Explore NG IM FORM</span></b
+            >?
+          </h1>
+        </div>
+        <div class="mx-auto" style="max-width: 800px">
+          <div class="text-center">
+            <a
+              class="btn btn-success btn-lg"
+              href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
+              target="_blank"
+              >Click here to Explore</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="bg-deep-green-light-footer">
-    <div class="container pt-5 pb-5">
-      <div class="row">
-        <div class="col-12 col-md-12 col-lg-4">
-          <img src="assets/logo.png" height="50" width="50">
-          <h5><b class="text-success">NG IM FORM</b> powered by Bootstrap</h5>
-          <p>A flexible and elegant Angular UI library for building submittable dynamic forms — powered by Bootstrap.
-          </p>
-          <small>Code licensed MIT</small>
-          <br>
-          <small>Current Version: 1.0.0</small>
+    <footer class="bg-deep-green-light-footer">
+      <div class="container pt-5 pb-5">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-4">
+            <img src="assets/logo.png" height="50" width="50" />
+            <h5><b class="text-success">NG IM FORM</b> powered by Bootstrap</h5>
+            <p>
+              A flexible and elegant Angular UI library for building submittable
+              dynamic forms — powered by Bootstrap.
+            </p>
+            <small>Code licensed MIT</small>
+            <br />
+            <small>Current Version: 1.0.0</small>
+          </div>
+
+          <div class="col-12 col-md-12 col-lg-8">
+            <div class="d-flex justify-content-end">
+              <div class="text-end">
+                <h5>Links</h5>
+
+                <a
+                  class="footer-link text-dark"
+                  href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
+                  target="_blank"
+                  >Github Repository</a
+                >
+                <br />
+                <a class="footer-link text-dark" href="installation.html"
+                  >View Docs</a
+                >
+                <br />
+                <a
+                  class="footer-link text-dark"
+                  href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
+                  target="_blank"
+                  >View Demo</a
+                >
+                <br />
+                <a
+                  class="footer-link text-dark"
+                  href="https://www.linkedin.com/in/irfatmahmoodturkey/"
+                  target="_blank"
+                  >Find me LinkedIn</a
+                >
+                <br />
+                <a
+                  class="footer-link text-dark"
+                  href="https://www.npmjs.com/package/ng-im-form-bootstrap"
+                  >Find me NPM</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="col-12 col-md-12 col-lg-8">
-          <div class="d-flex justify-content-end">
-            <div class="text-end">
-              <h5>Links</h5>
-
-              <a class="footer-link text-dark" href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
-                target="_blank">Github Repository</a>
-              <br>
-              <a class="footer-link text-dark" href="installation.html">View Docs</a>
-              <br>
-              <a class="footer-link text-dark" href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
-                target="_blank">View Demo</a>
-              <br>
-              <a class="footer-link text-dark" href="https://www.linkedin.com/in/irfatmahmoodturkey/"
-                target="_blank">Find me LinkedIn</a>
-              <br>
-              <a class="footer-link text-dark" href="notfound">Find me NPM</a>
+        <div class="row pt-3">
+          <div class="col-12">
+            <div class="d-flex justify-content-center">
+              <p class="text-secondary">
+                &copy; 2025 NG IM FORM powered by Bootstrap
+              </p>
             </div>
           </div>
         </div>
       </div>
+    </footer>
 
-      <div class="row pt-3">
-        <div class="col-12">
-          <div class="d-flex justify-content-center">
-            <p class="text-secondary">&copy; 2025 NG IM FORM powered by Bootstrap</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+  </body>
 </html>
