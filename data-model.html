@@ -1,118 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NG IM FORM powered by Bootstrap</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NG IM FORM powered by Bootstrap</title>
 
-  <body class="text-body">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/logo.png" alt="Bootstrap" width="50" height="50" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <div class="d-flex justify-content-between" style="width: 100%">
-            <div>
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link" href="installation.html"
-                    >Installation & Verify</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="form-builder.html">Form Builder</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="form-preview.html">Form Preview</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="data-model.html"
-                    >Data Model</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contribution.html"
-                    >Contribution Guidelines</a
-                  >
-                </li>
-              </ul>
-            </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+</head>
 
-            <div>
-              <a
-                class="btn btn-light"
-                href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
-                target="_blank"
-              >
-                <i class="fa-brands fa-github"></i>
-              </a>
-              <a
-                class="btn btn-light"
-                href="https://www.linkedin.com/in/irfatmahmoodturkey/"
-                target="_blank"
-              >
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-              <a
-                class="btn btn-light"
-                href="https://www.npmjs.com/package/ng-im-form-bootstrap"
-              >
-                <i class="fa-brands fa-npm"></i>
-              </a>
-            </div>
+<body class="text-body">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/logo.png" alt="Bootstrap" width="50" height="50" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="d-flex justify-content-between" style="width: 100%">
+          <div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="installation.html">Installation & Verify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="form-builder.html">Form Builder</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="form-preview.html">Form Preview</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="data-model.html">Data Model</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contribution.html">Contribution Guidelines</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <a class="btn btn-light" href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a class="btn btn-light" href="https://www.linkedin.com/in/irfatmahmoodturkey/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a class="btn btn-light" href="https://www.npmjs.com/package/ng-im-form-bootstrap">
+              <i class="fa-brands fa-npm"></i>
+            </a>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="container mt-3 mb-5">
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-          <section class="mb-5">
-            <h2 class="text-success">Data Models</h2>
-            <hr />
+  <div class="container mt-3 mb-5">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+        <section class="mb-5">
+          <h2 class="text-success">Data Models</h2>
+          <hr />
 
-            <p>
-              Below are the interface definitions used by the
-              <strong>Form Builder Module and Form Preview Module</strong>.
-            </p>
+          <p>
+            Below are the interface definitions used by the
+            <strong>Form Builder Module and Form Preview Module</strong>.
+          </p>
 
-            <h5><code>INgImHorizontalFormModel</code></h5>
+          <h5><code>INgImHorizontalFormModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImHorizontalFormModel {
+          <pre><code class="language-javascript">export interface INgImHorizontalFormModel {
        checkValidations: boolean;
        isResetButtonAvailable: boolean;
        submitAPIUrl: string;
@@ -131,9 +97,9 @@
        sections: INgImHorizonatalFormSectionModel[];
 }</code></pre>
 
-            <h5><code>INgImHorizonatalFormSectionModel</code></h5>
+          <h5><code>INgImHorizonatalFormSectionModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImHorizonatalFormSectionModel {
+          <pre><code class="language-javascript">export interface INgImHorizonatalFormSectionModel {
        id: string;
        title: string;
        subTitle: string;
@@ -143,9 +109,10 @@
        elements: INgImFormElementModel[];
 }</code></pre>
 
-            <h5><code>INgImFormElementModel</code></h5>
+          <h5><code>INgImFormElementModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormElementModel {
+          <pre><code class="language-javascript">export interface INgImFormElementModel {
+       id: string;
        type: string;
        textBoxComponent?: INgImFormTextBoxModel | null;
        textAreaComponent?: INgImFormTextAreaModel | null;
@@ -157,9 +124,9 @@
        textComponent?: INgImFormTextModel | null;
 }</code></pre>
 
-            <h5><code>INgImFormTextBoxModel</code></h5>
+          <h5><code>INgImFormTextBoxModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormTextBoxModel {
+          <pre><code class="language-javascript">export interface INgImFormTextBoxModel {
        id: string;
        name: string;
        label: string;
@@ -188,9 +155,9 @@
        } | null;
 }</code></pre>
 
-            <h5><code>INgImFormTextAreaModel</code></h5>
+          <h5><code>INgImFormTextAreaModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormTextAreaModel {
+          <pre><code class="language-javascript">export interface INgImFormTextAreaModel {
        id: string;
        name: string;
        label: string;
@@ -218,9 +185,9 @@
        } | null;
 }</code></pre>
 
-            <h5><code>INgImFormFileFieldModel</code></h5>
+          <h5><code>INgImFormFileFieldModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormFileFieldModel {
+          <pre><code class="language-javascript">export interface INgImFormFileFieldModel {
        id: string;
        name: string;
        label: string;
@@ -244,9 +211,9 @@
          | null;
 }</code></pre>
 
-            <h5><code>INgImFormSelectBoxModel</code></h5>
+          <h5><code>INgImFormSelectBoxModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormSelectBoxModel {
+          <pre><code class="language-javascript">export interface INgImFormSelectBoxModel {
        id: string;
        name: string;
        label: string;
@@ -267,9 +234,9 @@
          | null;
 }</code></pre>
 
-            <h5><code>INgImFormCheckBoxModel</code></h5>
+          <h5><code>INgImFormCheckBoxModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormCheckBoxModel {
+          <pre><code class="language-javascript">export interface INgImFormCheckBoxModel {
        id: string;
        name: string;
        label: string;
@@ -282,9 +249,9 @@
        requiredMessage: string | null;
 }</code></pre>
 
-            <h5><code>INgImFormRadioButtonGroupModel</code></h5>
+          <h5><code>INgImFormRadioButtonGroupModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormRadioButtonGroupModel {
+          <pre><code class="language-javascript">export interface INgImFormRadioButtonGroupModel {
        id: string;
        name: string;
        label: string;
@@ -303,9 +270,9 @@
          | null;
 }</code></pre>
 
-            <h5><code>INgImFormImageBoxModel</code></h5>
+          <h5><code>INgImFormImageBoxModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormImageBoxModel {
+          <pre><code class="language-javascript">export interface INgImFormImageBoxModel {
        id: string;
        order: number;
        name: string;
@@ -318,9 +285,9 @@
        alignment: string;
 }</code></pre>
 
-            <h5><code>INgImFormTextModel</code></h5>
+          <h5><code>INgImFormTextModel</code></h5>
 
-            <pre><code class="language-javascript">export interface INgImFormTextModel {
+          <pre><code class="language-javascript">export interface INgImFormTextModel {
        id: string;
        order: number;
        name: string;
@@ -329,96 +296,75 @@
        text: string;
        alignment: string;
 }</code></pre>
-          </section>
+        </section>
 
-          <hr />
+        <hr />
 
-          <div class="d-flex justify-content-between">
-            <a class="btn btn-success btn-lg" href="form-preview.html">
-              <span><i class="fas fa-arrow-left"></i> Previous Page</span><br />
-              <small class="text-prev-next-page"
-                >Learn about Form Preview</small
-              >
-            </a>
+        <div class="d-flex justify-content-between">
+          <a class="btn btn-success btn-lg" href="form-preview.html">
+            <span><i class="fas fa-arrow-left"></i> Previous Page</span><br />
+            <small class="text-prev-next-page">Learn about Form Preview</small>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-deep-green-light-footer">
+    <div class="container pt-5 pb-5">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+          <img src="assets/logo.png" height="50" width="50" />
+          <h5><b class="text-success">NG IM FORM</b> powered by Bootstrap</h5>
+          <p>
+            A flexible and elegant Angular UI library for building submittable
+            dynamic forms — powered by Bootstrap.
+          </p>
+          <small>Code licensed MIT</small>
+          <br />
+          <small>Current Version: 1.0.0</small>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-8">
+          <div class="d-flex justify-content-end">
+            <div class="text-end">
+              <h5>Links</h5>
+
+              <a class="footer-link text-dark" href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
+                target="_blank">Github Repository</a>
+              <br />
+              <a class="footer-link text-dark" href="installation.html">View Docs</a>
+              <br />
+              <a class="footer-link text-dark" href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
+                target="_blank">View Demo</a>
+              <br />
+              <a class="footer-link text-dark" href="https://www.linkedin.com/in/irfatmahmoodturkey/"
+                target="_blank">Find me LinkedIn</a>
+              <br />
+              <a class="footer-link text-dark" href="https://www.npmjs.com/package/ng-im-form-bootstrap">Find me NPM</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row pt-3">
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <p class="text-secondary">
+              &copy; 2025 NG IM FORM powered by Bootstrap
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </footer>
 
-    <footer class="bg-deep-green-light-footer">
-      <div class="container pt-5 pb-5">
-        <div class="row">
-          <div class="col-12 col-md-12 col-lg-4">
-            <img src="assets/logo.png" height="50" width="50" />
-            <h5><b class="text-success">NG IM FORM</b> powered by Bootstrap</h5>
-            <p>
-              A flexible and elegant Angular UI library for building submittable
-              dynamic forms — powered by Bootstrap.
-            </p>
-            <small>Code licensed MIT</small>
-            <br />
-            <small>Current Version: 1.0.0</small>
-          </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
 
-          <div class="col-12 col-md-12 col-lg-8">
-            <div class="d-flex justify-content-end">
-              <div class="text-end">
-                <h5>Links</h5>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+</body>
 
-                <a
-                  class="footer-link text-dark"
-                  href="https://github.com/IrfatMahmoodTurkey/ng-im-form-bootstrap"
-                  target="_blank"
-                  >Github Repository</a
-                >
-                <br />
-                <a class="footer-link text-dark" href="installation.html"
-                  >View Docs</a
-                >
-                <br />
-                <a
-                  class="footer-link text-dark"
-                  href="https://irfatmahmoodturkey.github.io/ng-im-form-bootstrap-demo"
-                  target="_blank"
-                  >View Demo</a
-                >
-                <br />
-                <a
-                  class="footer-link text-dark"
-                  href="https://www.linkedin.com/in/irfatmahmoodturkey/"
-                  target="_blank"
-                  >Find me LinkedIn</a
-                >
-                <br />
-                <a
-                  class="footer-link text-dark"
-                  href="https://www.npmjs.com/package/ng-im-form-bootstrap"
-                  >Find me NPM</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row pt-3">
-          <div class="col-12">
-            <div class="d-flex justify-content-center">
-              <p class="text-secondary">
-                &copy; 2025 NG IM FORM powered by Bootstrap
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
-  </body>
 </html>
